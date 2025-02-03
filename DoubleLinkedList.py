@@ -27,6 +27,17 @@ class dll:
         cur.next = new
         new.prev = cur
 
+    def reverse(self):
+        if self.head:
+            cur = self.head
+            while cur.next:
+                cur = cur.next
+            print("None", end=" <-> ")
+            while cur.prev:
+                print(f"{cur.data}", end=" <-> ")
+                cur = cur.prev
+            print("None")
+
     def display(self):
         if self.head is None:
             print("The Linked List is Empty!!!")
@@ -44,4 +55,6 @@ a = int(input("Enter the number of nodes you want : "))
 
 for i in range(a):
     new.insertatbeg(int(input()))
+    new.display()
+    new.reverse()
     new.display()
