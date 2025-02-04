@@ -24,6 +24,7 @@ class SLL:
     
     def display(self):
         cur = self.head
+        print("")
         while cur:
             print(cur.data, end=' -> ')
             cur = cur.next
@@ -63,13 +64,13 @@ class SLL:
     def primeornot(self):
         cur = self.head
         co = 0
+        print("")
         while cur:
             c = 0
             for i in range(1, cur.data + 1):
                 if cur.data % i == 0:
                     c += 1
             co += 1
-
             if c == 2:
                 print(f"The value {co}. {cur.data} is a Prime number!")
             cur = cur.next
@@ -80,6 +81,7 @@ class SLL:
         s = []
         if self.head:
             cur = self.head
+            print("")
             print("The pairs are :")
             while cur.next:
                 forw = cur.next
@@ -93,12 +95,31 @@ class SLL:
     def perfectsquare(self):
         if self.head:
             cur = self.head
+            print("")
             while cur.next:
                 if cur.data > 0:
                     square = cur.data ** (0.5)
                     if square.is_integer():
                         print(f"{cur.data} is a perfect square with roots {square}*{square} !")
                 cur = cur.next
+
+    def sumtosingle(self):
+        if self.head:
+            cur = self.head
+            print("")
+            while cur:
+                tar = cur.data
+                if tar >= 10:
+                    if tar > 9:
+                        si = tar % 9
+                    else:
+                        si = 9
+                else:
+                    si = tar
+                cur = cur.next
+                print(si, end=" -> ")
+            print("None")
+        
 
 new = SLL()
 
@@ -132,7 +153,6 @@ print("")
 
 ch = input("Do you want to check whether the linked list has prime numbers or not! (Y or N) : ").strip().lower()
 if ch == "y":
-    print("")
     new.primeornot()
 elif ch != "y" and ch != "n":
     print("Enter a proper value!")
@@ -148,8 +168,14 @@ print("")
 
 ch = input("Do you want to check perfect squares in the Linked List! (Y or N) : ").strip().lower()
 if ch == "y":
-    print("")
     new.perfectsquare()
+elif ch != "y" and ch != "n":
+    print("Enter a proper value!")
+print("")
+
+ch = input("Do you want to check the reduction to single digits ! (Y or N) : ").strip().lower()
+if ch == "y":
+    new.sumtosingle()
 elif ch != "y" and ch != "n":
     print("Enter a proper value!")
 print("")
