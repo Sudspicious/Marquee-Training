@@ -72,8 +72,6 @@ class SLL:
 
             if c == 2:
                 print(f"The value {co}. {cur.data} is a Prime number!")
-            else:
-                print(f"The value {co}. {cur.data} is not a Prime number!")
             cur = cur.next
 
 
@@ -100,8 +98,6 @@ class SLL:
                     square = cur.data ** (0.5)
                     if square.is_integer():
                         print(f"{cur.data} is a perfect square with roots {square}*{square} !")
-                    else:
-                        print(f"{cur.data} is not a perfect square !") 
                 cur = cur.next
 
 new = SLL()
@@ -152,6 +148,7 @@ print("")
 
 ch = input("Do you want to check perfect squares in the Linked List! (Y or N) : ").strip().lower()
 if ch == "y":
+    print("")
     new.perfectsquare()
 elif ch != "y" and ch != "n":
     print("Enter a proper value!")
