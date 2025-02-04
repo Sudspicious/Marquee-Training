@@ -76,6 +76,17 @@ class SLL:
         else:
             print("The Linked List is not a Prime number!")
 
+    def pairs(self, target):
+        if self.head:
+            cur = self.head
+            while cur.next:
+                forw = cur.next
+                while forw:
+                    if (cur.data + forw.data) == target:
+                        print(f"The pair is [{cur.data}, {forw.data}]")
+                    forw = forw.next
+                cur = cur.next
+
 new = SLL()
 
 n = int(input("Enter the number of nodes: "))
@@ -86,7 +97,12 @@ for _ in range(n):
 
 new.display()
 
-new.is_palindrome()
+ch = input("Do you want to check whether the linked list is palindrome or not! (Y or N)").strip().lower()
+if ch == "y":
+    new.is_palindrome()
+elif ch != "y" and ch != "n":
+    print("Enter a proper value!")
+
 ch = input("Do you want to rotate the linked list! (Y or N)").strip().lower()
 if ch == "y":
     k = int(input("Enter the number of nodes to rotate : "))
@@ -94,8 +110,21 @@ if ch == "y":
         new.rotate(k)
     else:
         print("Enter a valid value!")
-
+elif ch != "y" and ch != "n":
+    print("Enter a proper value!")
     new.display()
 
+ch = input("Do you want to check whether the linked list has prime numbers or not! (Y or N)").strip().lower()
+if ch == "y":
+    k = int(input("Enter the number of nodes to rotate : "))
+    if k < n:
+        new.primeornot()
+    else:
+        print("Enter a valid value!")
 
-new.primeornot()
+ch = input("Do you want to check a pair which adds up to a target value! (Y or N)").strip().lower()
+if ch == "y":
+    target = int(input("Enter target value : "))
+    new.pairs(target)
+elif ch != "y" and ch != "n":
+    print("Enter a proper value!")
