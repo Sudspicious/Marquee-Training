@@ -44,19 +44,37 @@ class stacks:
     
     def findnexG(self):
         st = self.stack
-        j = []
+        m = []
         l = len(st)
         if l == 0:
             print("Stack is empty!")
             return
         else:
             for i in range(l):
-                if i + 1 <= l-1:
-                    if (st[i+1] > st[i]):
-                        j.append(st[i+1])
+                for j in range(i+1, l):
+                    if st[j] > st[i]:
+                        m.append(st[i+1])
+                    elif st[j] == st[i]:  
+                        m.append(0)
                     else:
-                        j.append(0)
-        j.append(0)
+                        m.append(st[i])
+        print(m)
+
+    def revwilorsl(self):
+        st = self.stack
+        l = len(st)
+        j = stacks(l)
+        for i in st:
+            j.push(i)
+        print(j.getstack())
+
+    def remdup(self):
+        st = self.stack
+        l = len(st)
+        j = []
+        for i in st:
+            if i not in j:
+                j.append(i)
         print(j)
 
 
@@ -110,5 +128,6 @@ while choice != "n":
         print("Invalid choice!")
     choice = input("Do you want to perform anymore actions ? (Y or N) : ").strip().lower()
 
-    
-st.findnexG()
+st.revwilorsl()
+st.remdup()   
+#st.findnexG()
