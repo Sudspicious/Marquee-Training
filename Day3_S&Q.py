@@ -31,20 +31,41 @@ class stacks:
             return print(f"{len(self.stack)} is the length of the stack!")
     
     def isempty(self):
-        self.stack = []
+        if len(self.stack) == 0:
+            print("Stack is empty!!")
+        else:
+            print("Stack has some elements!!")
 
     def getstack(self):
         if len(self.stack) == 0 :
             print("Stack is empty!")
         else:
             return print(self.stack[::-1])
+    
+    def findnexG(self):
+        st = self.stack
+        j = []
+        l = len(st)
+        if l == 0:
+            print("Stack is empty!")
+            return
+        else:
+            for i in range(l):
+                if i + 1 <= l-1:
+                    if (st[i+1] > st[i]):
+                        j.append(st[i+1])
+                    else:
+                        j.append(0)
+        j.append(0)
+        print(j)
+
 
 n = int(input("Enter the number of items : "))
 
 st = stacks(n)
 
 for i in range(n):
-    st.push(input("Push : "))
+    st.push(int(input("Push : ")))
 
 choice = input("Do you want to perform anymore actions ? (Y or N) : ").strip().lower()
 while choice != "n":
@@ -89,3 +110,5 @@ while choice != "n":
         print("Invalid choice!")
     choice = input("Do you want to perform anymore actions ? (Y or N) : ").strip().lower()
 
+    
+st.findnexG()
