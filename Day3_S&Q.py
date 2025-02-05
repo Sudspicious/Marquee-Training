@@ -77,6 +77,19 @@ class stacks:
                 j.append(i)
         print(j)
 
+    def pushzeroes(self):
+        st = self.stack
+        l = len(st)
+        c = 0
+        s = []
+        for i in range(l):
+            if st[i] != 0:
+                s.append(st[i])
+            else:
+                c += 1
+        for i in range(c):
+            s.append(0)
+        print(s)
 
 n = int(input("Enter the number of items : "))
 
@@ -129,5 +142,6 @@ while choice != "n":
     choice = input("Do you want to perform anymore actions ? (Y or N) : ").strip().lower()
 
 st.revwilorsl()
-st.remdup()   
+st.remdup() 
+st.pushzeroes()
 #st.findnexG()
