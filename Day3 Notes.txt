@@ -1,0 +1,15 @@
+Stack and queues
+
+stack is a linear data type
+
+it follows FILO or LIFO order
+
+it can be done using arrays or LinkedList 
+
+Stack Operations: 
+    push     => adding item
+    pop      => removing item
+    top      => getting the top element
+    size     => getting the size of the stack
+    isempty  => empty's the stack
+    getstack => displaying all the elements in the stack
