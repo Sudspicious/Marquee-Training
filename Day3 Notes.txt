@@ -13,3 +13,14 @@ Stack Operations:
     size     => getting the size of the stack
     isempty  => empty's the stack
     getstack => displaying all the elements in the stack
+
+queues
+
+Queues are also a linear data type
+operations in queues 
+1. enqueue add value into the queues
+2. dequeue removes
+3. size gibes the size of the queues
+4. isempty checks if the queue is empty or not
+
+we can do operations on both ends
