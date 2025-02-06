@@ -25,3 +25,15 @@ Collision pointers
     10                      7
     Sample Output           
     True                    False
+
+Sliding Window
+    - Sliding Window is a tehcnique used for iterating through a finite data set, typically an array or strings in a specific and controlled way
+    It involves creating a window , which is a subset of the data, that slides through the larger data set, typically one element at a time, while 
+    performing a specific operation on each subset of the data.
+    - This technique is commonly used in algorithms like finding subarrays with a specific sum, finding the longest substring with unique characters    
+    with unique characters or solving problems that require a fixed sized window to process the elements
+    - Types:
+        1. Fixed Size Sliding Window
+        2. Variable Size Sliding Window
+    
+    
