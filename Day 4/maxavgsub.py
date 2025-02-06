@@ -8,7 +8,7 @@ def maxi(ar, s):
         i += 1
         s += 1
         maxi = max(cur, maxi)
-    return maxi/h
+    return "The maximum average from the sub array is :" + maxi/h
 
 n = list(map(int, input().split()))
 s = int(input("Enter the window size: "))
