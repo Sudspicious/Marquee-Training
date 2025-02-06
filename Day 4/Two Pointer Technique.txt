@@ -1,0 +1,27 @@
+The two pointer technique involves using two pointers to iterate through a data structure like an array or linked list. They key property is that the pointers move through the data structure in tandem, enabling us to compare or correlate the elements they point to.
+
+Types of pointers:
+    - Collision pointers
+    - Forward / Parallel pointers
+    - Fast / Slow pointers
+    - Fixed Distance pointers.(Sliding Window)
+
+Collision pointers
+    - Two Sum
+    Given a sorted array of integers arr and a target integer target, return true id there exists two elements in the array such that their sum equals target.
+    Otherwise, return False.
+
+    - Input Format
+    The first line contains an integer n (1 <= n <= 10^5), the size of the array
+    The second line contains n integers, the elements of the arr[] (1 <= arr[i] <= 10^9)
+    The third line contains an integer target (1 <= target <= 10^9)
+
+    - Output Format
+    Return true if a pair with the sum equal to the target is found, otherwise, return false.
+
+    Sample Input 
+    7                       4
+    1 2 3 4 6 8 9           1 2 3 9
+    10                      7
+    Sample Output           
+    True                    False
