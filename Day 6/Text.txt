@@ -1,0 +1,10 @@
+A Binary Search Tree or BST is a data structure used in computer science for organizing and storing data in a sorted manner.
+Each node in a Binary Search Tree has at most two children, a left child and a right child, with the left chield containing,
+values less than the present value in the node.
+
+
+Types of Insetion in Binary Search Tree:
+
+    - Inorder
+    - Pre-order
+    - Post-order
