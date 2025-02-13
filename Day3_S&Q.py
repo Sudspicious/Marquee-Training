@@ -49,15 +49,14 @@ class stacks:
         if l == 0:
             print("Stack is empty!")
             return
-        else:
-            for i in range(l):
-                for j in range(i+1, l):
-                    if st[j] > st[i]:
-                        m.append(st[i+1])
-                    elif st[j] == st[i]:  
-                        m.append(0)
-                    else:
-                        m.append(st[i])
+        for i in range(l):
+            for j in range(i+1, l):
+                if st[j] > st[i]:
+                    m.append(st[i+1])
+                elif st[j] == st[i]:  
+                    m.append(0)
+                else:
+                    m.append(st[i])
         print(m)
 
     def revwilorsl(self):
